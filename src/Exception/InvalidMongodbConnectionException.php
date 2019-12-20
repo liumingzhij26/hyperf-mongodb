@@ -10,7 +10,7 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Tf\HyperfMongodb\Exception;
+namespace Hyperf\Mongodb\Exception;
 
 use RuntimeException;
 

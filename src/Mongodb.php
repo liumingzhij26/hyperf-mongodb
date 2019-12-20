@@ -10,12 +10,12 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Tf\HyperfMongodb;
+namespace Hyperf\Mongodb;
 
 use Hyperf\Utils\Context;
 use MongoDB\Client;
-use Tf\HyperfMongodb\Exception\InvalidMongodbConnectionException;
-use Tf\HyperfMongodb\Pool\PoolFactory;
+use Hyperf\Mongodb\Exception\InvalidMongodbConnectionException;
+use Hyperf\Mongodb\Pool\PoolFactory;
 
 class Mongodb
 {

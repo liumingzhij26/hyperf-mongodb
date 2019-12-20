@@ -13,7 +13,7 @@ declare(strict_types=1);
  *
  **/
 
-namespace Tf\HyperfMongodb\Exception;
+namespace Hyperf\Mongodb\Exception;
 
 class MongodbNotFoundException extends \RuntimeException
 {

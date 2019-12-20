@@ -10,15 +10,15 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Tf\HyperfMongodb\Pool;
+namespace Hyperf\Mongodb\Pool;
 
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Contract\ConnectionInterface;
 use Hyperf\Pool\Pool;
 use Hyperf\Utils\Arr;
 use Psr\Container\ContainerInterface;
-use Tf\HyperfMongodb\Frequency;
-use Tf\HyperfMongodb\MongodbConnection;
+use Hyperf\Mongodb\Frequency;
+use Hyperf\Mongodb\MongodbConnection;
 
 class MongodbPool extends Pool
 {

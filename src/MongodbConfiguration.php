@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Tf\HyperfMongodb;
+namespace Hyperf\Mongodb;
 
 
-use Tf\HyperfMongodb\Exception\InvalidMongodbConnectionException;
+use Hyperf\Mongodb\Exception\InvalidMongodbConnectionException;
 
 class MongodbConfiguration
 {

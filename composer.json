@@ -30,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Tf\\HyperfMongodb\\": "src/"
+            "Hyperf\\Mongodb\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TfTest\\HyperfMongodb\\": "tests/"
+            "HyperfTest\\Mongodb\\": "tests/"
         }
     },
     "config": {
@@ -46,7 +46,7 @@
             "dev-master": "1.1-dev"
         },
         "hyperf": {
-            "config": "Tf\\HyperfMongod\\ConfigProvider"
+            "config": "Hyperf\\Mongodb\\ConfigProvider"
         }
     },
     "bin": [

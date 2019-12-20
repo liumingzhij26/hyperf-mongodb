@@ -10,11 +10,11 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Tf\HyperfMongodb;
+namespace Hyperf\Mongodb;
 
 use Hyperf\Contract\ConfigInterface;
 use MongoDB\Client;
-use Tf\HyperfMongodb\Exception\InvalidMongodbProxyException;
+use Hyperf\Mongodb\Exception\InvalidMongodbProxyException;
 
 class MongodbFactory
 {

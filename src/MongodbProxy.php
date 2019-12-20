@@ -10,9 +10,9 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Tf\HyperfMongodb;
+namespace Hyperf\Mongodb;
 
-use Tf\HyperfMongodb\Pool\PoolFactory;
+use Hyperf\Mongodb\Pool\PoolFactory;
 
 class MongodbProxy extends Mongodb
 {

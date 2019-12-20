@@ -10,11 +10,11 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Tf\HyperfMongodb\Pool;
+namespace Hyperf\Mongodb\Pool;
 
 use Hyperf\Di\Container;
 use Psr\Container\ContainerInterface;
-use Tf\HyperfMongodb\MongodbProxy;
+use Hyperf\Mongodb\MongodbProxy;
 
 class PoolFactory
 {
