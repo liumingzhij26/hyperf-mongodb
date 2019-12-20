@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace Tf\HyperfMongodb;
 
 use Hyperf\Utils\Context;
+use MongoDB\Client;
 use Tf\HyperfMongodb\Exception\InvalidMongodbConnectionException;
 use Tf\HyperfMongodb\Pool\PoolFactory;
 
@@ -29,6 +30,13 @@ class Mongodb
      */
     protected $poolName = 'default';
 
+    /**
+     *
+     *
+     * Mongodb constructor.
+     * @param PoolFactory $factory
+     * @return Client
+     */
     public function __construct(PoolFactory $factory)
     {
         $this->factory = $factory;
@@ -53,7 +61,7 @@ class Mongodb
 
         return $result;
     }
-    
+
     /**
      * @param $hasContextConnection
      * @return MongodbConnection
