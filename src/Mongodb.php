@@ -75,7 +75,6 @@ class Mongodb
         if (!$connection instanceof MongodbConnection) {
             $pool = $this->factory->getPool($this->poolName);
             $connection = $pool->get();
-
         }
         if (!$connection instanceof MongodbConnection) {
             throw new InvalidMongodbConnectionException('The connection is not a valid RedisConnection.');

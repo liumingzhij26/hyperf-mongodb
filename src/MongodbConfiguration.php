@@ -3,7 +3,6 @@
 
 namespace Hyperf\Mongodb;
 
-
 use Hyperf\Mongodb\Exception\InvalidMongodbConnectionException;
 
 class MongodbConfiguration
@@ -174,15 +173,19 @@ class MongodbConfiguration
      */
     protected $config;
 
-    public function __construct(array $host, int $port, string $username, string $password, string $database, array $options, array $pool)
+    /**
+     * MongodbConfiguration constructor.
+     * @param array $config
+     */
+    public function __construct(array $config)
     {
-        $this->host = $host;
-        $this->port = $port;
-        $this->username = $username;
-        $this->password = $password;
-        $this->database = $database;
-        $this->options = $options;
-        $this->pool = $pool;
+        $this->host = $config['host'] ?? [];
+        $this->port = $config['port'] ?? 27017;
+        $this->username = $config['username'] ?? '';
+        $this->password = $config['password'] ?? '';
+        $this->database = $config['database'] ?? '';
+        $this->options = $config['options'] ?? [];
+        $this->pool = $config['pool'] ?? [];
     }
 
     public function getDsn()
@@ -197,4 +200,3 @@ class MongodbConfiguration
         return "mongodb://" . implode(',', $hosts);
     }
 }
-

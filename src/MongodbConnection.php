@@ -76,16 +76,7 @@ class MongodbConnection extends BaseConnection implements ConnectionInterface
 
     public function reconnect(): bool
     {
-        print_r($this->config);
-        $configuration = new MongodbConfiguration(
-            $this->config['host'],
-            $this->config['port'],
-            $this->config['username'],
-            $this->config['password'],
-            $this->config['database'],
-            $this->config['options'],
-            $this->config['pool']
-        );
+        $configuration = new MongodbConfiguration($this->config);
         $mongodb = new Client($configuration->getDsn(), $configuration->getOptions());
         if (!$mongodb) {
             throw new ConnectionException('Connection reconnect failed.');
