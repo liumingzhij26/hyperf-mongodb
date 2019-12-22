@@ -46,6 +46,7 @@ class Mongodb
     {
         // Get a connection from coroutine context or connection pool.
         $hasContextConnection = Context::has($this->getContextKey());
+        print_r([__FILE__, $name, $arguments, $hasContextConnection]);
         $connection = $this->getConnection($hasContextConnection);
 
         try {
@@ -55,6 +56,7 @@ class Mongodb
         } finally {
             // Release connection.
             if (!$hasContextConnection) {
+                Context::set($this->getContextKey(), $connection);
                 $connection->release();
             }
         }
