@@ -22,18 +22,18 @@ class ConfigProvider
             'dependencies' => [
                 Client::class => Mongodb::class,
             ],
-            'annotations' => [
+            'annotations'  => [
                 'scan' => [
                     'paths' => [
                         __DIR__,
                     ],
                 ],
             ],
-            'publish' => [
+            'publish'      => [
                 [
-                    'id' => 'config',
+                    'id'          => 'config',
                     'description' => 'The config of mongodb client.',
-                    'source' => __DIR__ . '/../publish/mongodb.php',
+                    'source'      => __DIR__ . '/../publish/mongodb.php',
                     'destination' => BASE_PATH . '/config/autoload/mongodb.php',
                 ],
             ],
