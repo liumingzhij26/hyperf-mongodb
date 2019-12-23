@@ -184,7 +184,14 @@ class MongodbConfiguration
         $this->username = $config['username'] ?? '';
         $this->password = $config['password'] ?? '';
         $this->database = $config['database'] ?? '';
-        $this->options = $config['options'] ?? [];
+        $options = [];
+        if (isset($config['username']) && $config['username']) {
+            $options['username'] = $config['username'];
+        }
+        if (isset($config['password']) && $config['password']) {
+            $options['password'] = $config['password'];
+        }
+        $this->options = array_merge($config['options'] ?? [], $options);
         $this->pool = $config['pool'] ?? [];
     }
 
