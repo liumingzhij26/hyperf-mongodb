@@ -93,7 +93,15 @@ class MongodbConfiguration
      */
     public function setOptions(array $options): MongodbConfiguration
     {
-        $this->options = $options;
+        $config = [];
+        if ($this->username) {
+            $config['username'] = $this->username;
+        }
+        if ($this->password) {
+            $config['password'] = $this->password;
+        }
+
+        $this->options = array_merge($options, $config);
         return $this;
     }
 
@@ -184,14 +192,7 @@ class MongodbConfiguration
         $this->username = $config['username'] ?? '';
         $this->password = $config['password'] ?? '';
         $this->database = $config['database'] ?? '';
-        $options = [];
-        if ($this->username) {
-            $options['username'] = $this->username;
-        }
-        if ($this->password) {
-            $options['password'] = $this->password;
-        }
-        $this->options = array_merge($config['options'] ?? [], $options);
+        $this->options = $this->setOptions($config['options'] ?? []);
         $this->pool = $config['pool'] ?? [];
     }
 
