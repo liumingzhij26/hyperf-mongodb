@@ -185,11 +185,11 @@ class MongodbConfiguration
         $this->password = $config['password'] ?? '';
         $this->database = $config['database'] ?? '';
         $options = [];
-        if (isset($config['username']) && $config['username']) {
-            $options['username'] = $config['username'];
+        if ($this->username) {
+            $options['username'] = $this->username;
         }
-        if (isset($config['password']) && $config['password']) {
-            $options['password'] = $config['password'];
+        if ($this->password) {
+            $options['password'] = $this->password;
         }
         $this->options = array_merge($config['options'] ?? [], $options);
         $this->pool = $config['pool'] ?? [];
