@@ -14,7 +14,6 @@ namespace Hyperf\Mongodb\Pool;
 
 use Hyperf\Di\Container;
 use Psr\Container\ContainerInterface;
-use Hyperf\Mongodb\MongodbProxy;
 
 class PoolFactory
 {
@@ -24,7 +23,7 @@ class PoolFactory
     protected $container;
 
     /**
-     * @var MongodbProxy[]
+     * @var MongodbPool[]
      */
     protected $pools = [];
 

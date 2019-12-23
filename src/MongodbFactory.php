@@ -25,9 +25,8 @@ class MongodbFactory
 
     public function __construct(ConfigInterface $config)
     {
-        $redisConfig = $config->get('mongodb');
-
-        foreach ($redisConfig as $poolName => $item) {
+        $mongodbConfig = $config->get('mongodb');
+        foreach ($mongodbConfig as $poolName => $item) {
             $this->proxies[$poolName] = make(MongodbProxy::class, ['pool' => $poolName]);
         }
     }
