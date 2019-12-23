@@ -192,7 +192,7 @@ class MongodbConfiguration
         $this->username = $config['username'] ?? '';
         $this->password = $config['password'] ?? '';
         $this->database = $config['database'] ?? '';
-        $this->options = $this->setOptions($config['options'] ?? []);
+        $this->setOptions($config['options'] ?? []);
         $this->pool = $config['pool'] ?? [];
     }
 
