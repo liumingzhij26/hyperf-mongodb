@@ -5,7 +5,7 @@
 
 ## demo
 
-配置文件，可以参考，`publish` 目录下 `mongodb.php`
+配置文件路径：`config/autoload/mongodb.php`，可以参考 `publish` 目录下 `mongodb.php`
 
 ```php
 <?php
