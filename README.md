@@ -37,7 +37,7 @@ return [
 
 ```
 
-通过 `Mongodb\Client::class` ，调用，具体用法参考：`https://docs.mongodb.com/ecosystem/drivers/php/`
+通过 `Mongodb\Client::class` ，调用，具体用法参考：https://docs.mongodb.com/ecosystem/drivers/php/
 
 ```php
 $container->get(MongoDB\Client::class)->selectDatabase('database_name')->selectCollection('collection_name');
