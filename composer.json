@@ -12,9 +12,9 @@
     },
     "require": {
         "php": ">=7.3",
-        "hyperf/contract": "~2.1.0",
-        "hyperf/pool": "~2.1.0",
-        "hyperf/utils": "~2.1.0",
+        "hyperf/contract": "~2.2.0",
+        "hyperf/pool": "~2.2.0",
+        "hyperf/utils": "~2.2.0",
         "mongodb/mongodb": "^1.5"
     },
     "suggest": {
@@ -35,7 +35,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.1-dev"
+            "dev-master": "2.2-dev"
         },
         "hyperf": {
             "config": "Hyperf\\Mongodb\\ConfigProvider"
